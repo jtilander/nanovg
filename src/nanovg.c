@@ -983,7 +983,7 @@ static void nvg__flattenPaths(struct NVGcontext* ctx)
 	struct NVGpoint* p1;
 	struct NVGpoint* pts;
 	struct NVGpath* path;
-	int i, j, nleft;
+	int i, j;
 	float* cp1;
 	float* cp2;
 	float* p;
@@ -1216,7 +1216,6 @@ static int nvg__expandStrokeAndFill(struct NVGcontext* ctx, int feats, float w, 
 	float wo = 0, iw, aa = ctx->fringeWidth;
 	int ncap = nvg__curveDivs(w, NVG_PI, ctx->tessTol / 4.0f);
 	int nleft = 0;
-	struct NVGstate* state = nvg__getState(ctx);
 
 	if (w > 0.0f) iw = 1.0f / w;
 
